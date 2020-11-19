@@ -11,8 +11,8 @@ import (
 
 func main() {
 	// Command options
-	f := flag.String("file", "", "Input JSON file")
-	i := flag.Int("indent", 2, "The number of space")
+	f := flag.String("file", "", "Input JSON file.")
+	i := flag.Int("indent", 2, "The number of space to indent.")
 	flag.Parse()
 
 	buf, err := readJson(*f)
