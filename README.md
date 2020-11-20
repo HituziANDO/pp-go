@@ -7,12 +7,28 @@
 ### JSON Parse
 
 ```shell script
-pp '{"key1": "val1", "key2": "val2"}'
+pp '{"key1":"val1","key2":"val2"}'
 ```
+
+Output:
+
+```json
+{
+  "key1": "val1",
+  "key2": "val2"
+}
+```
+
+---
+As other usage,
+
+Pipeline:
 
 ```shell script
 less test.json | pp
 ```
+
+`-file` option:
 
 ```shell script
 pp -file=test.json
@@ -27,9 +43,10 @@ The `pp` command has some options.
 |file|Input JSON file.||
 |indent|The number of space to indent.|2|
 
+For example:
 
 ```shell script
-pp -indent=4 '{"key1": "val1", "key2": "val2"}'
+pp -indent=4 '{"key1":"val1","key2":"val2"}'
 ```
 
 ```shell script
@@ -52,4 +69,12 @@ To make the `pp` command, run following command. Then add `path/to/bin` to your 
 
 ```
 go build -o ./bin/pp
+```
+
+## Test
+
+To test, run `go test`.
+
+```
+go test -v
 ```
