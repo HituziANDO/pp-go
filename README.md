@@ -7,13 +7,19 @@
 ### JSON Parse
 
 ```shell script
-pp '{"key1":"val1","key2":"val2"}'
+pp '{"key1":"val1","key2":"val2","arr":[101,202,303,404]}'
 ```
 
 Output:
 
 ```json
 {
+  "arr": [
+    101,
+    202,
+    303,
+    404
+  ],
   "key1": "val1",
   "key2": "val2"
 }
