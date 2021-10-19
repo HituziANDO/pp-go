@@ -1,13 +1,13 @@
 # pp-go
 
-`pp` is pretty print command written in Go.
+`ppgo` is pretty print command written in Go.
 
 ## Usage
 
 ### JSON Parse
 
 ```shell script
-pp '{"key1":"val1","key2":"val2","arr":[101,202,303,404]}'
+ppgo '{"key1":"val1","key2":"val2","arr":[101,202,303,404]}'
 ```
 
 Output:
@@ -31,18 +31,18 @@ As other usage,
 Pipeline:
 
 ```shell script
-less test.json | pp
+less test.json | ppgo
 ```
 
 `-file` option:
 
 ```shell script
-pp -file=test.json
+ppgo -file=test.json
 ```
 
 ### Options
 
-The `pp` command has some options.
+The `ppgo` command has some options.
 
 |Option|Explanation|default|
 |:-:|:-:|:-:|
@@ -52,29 +52,29 @@ The `pp` command has some options.
 For example:
 
 ```shell script
-pp -indent=4 '{"key1":"val1","key2":"val2"}'
+ppgo -indent=4 '{"key1":"val1","key2":"val2"}'
 ```
 
 ```shell script
-less test.json | pp -indent=4
+less test.json | ppgo -indent=4
 ```
 
 ```shell script
-pp -file=test.json -indent=4
+ppgo -file=test.json -indent=4
 ```
 
 To show help, run following command.
 
 ```shell script
-pp -h
+ppgo -h
 ```
 
 ## Build
 
-To make the `pp` command, run following command. Then add `path/to/bin` to your $PATH.
+To make the `ppgo` command, run following command. Then add `path/to/bin` to your $PATH.
 
 ```
-go build -o ./bin/pp
+go build -o ./bin/ppgo
 ```
 
 ## Test
