@@ -69,6 +69,12 @@ To show help, run following command.
 ppgo -h
 ```
 
+## Get Started
+
+```shell script
+go mod init pp-go
+```
+
 ## Build
 
 To make the `ppgo` command, run following command. Then add `path/to/bin` to your $PATH.
